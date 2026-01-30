@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 import User from '../model/user.model.js';
-import addToGoogleSheet from '../utils/googlesheet.js';
+import addToGoogleSheet from '../utils/googleSheet.js';
 
 const emailSend = async (req, res) => {
   try {
