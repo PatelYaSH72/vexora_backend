@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get('/',(req,res)=>{
-  res.send('Vexoraa Backend is running');
+  res.send('Vexoraa Backend is running  well');
 })
 
 app.use('/api/user',userrouter)
