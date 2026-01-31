@@ -1,6 +1,6 @@
 import nodemailer from 'nodemailer';
 import User from '../model/user.model.js';
-// import addToGoogleSheet from '../utils/googleSheet.js';
+import addToGoogleSheet from '../utils/googleSheet.js';
 
 const emailSend = async (req, res) => {
   try {
@@ -89,7 +89,7 @@ const emailSend = async (req, res) => {
     await transporter.sendMail(adminMail);
     await transporter.sendMail(userMail);
     
-    // await addToGoogleSheet(name, email);
+    await addToGoogleSheet(name, email);
 
     res.status(200).json({ message: 'Emails sent & user saved successfully ✅' });
 
